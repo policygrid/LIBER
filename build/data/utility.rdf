@@ -1,0 +1,831 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:base="http://www.policygrid.org/utility.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" >
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Department"/>
+    <rdf:rest rdf:nodeID="A3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#Email"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#CollaboratorOf">
+    <rdfs:comment>LIBERmenu=Person=Activities/Roles</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasCollaborator"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activities/Roles</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.policygrid.org/utility.owl#MemberOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#SubcontractorOf">
+    <rdfs:comment>LIBERmenu=Person=Activities/Roles</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasSubcontractor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activities/Roles</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.policygrid.org/utility.owl#MemberOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasResearcher">
+    <rdfs:comment>LIBERmenu=Project=Members</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#ResearcherOf"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.policygrid.org/utility.owl#HasMember"/>
+    <rdfs:comment>LIBERmenu=Person=General information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasResearchQuestions">
+    <rdfs:comment>LIBERmenu=Project=-NONE-</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#ResearchQuestion"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#ResearchQuestionOf"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>LIBERpropername</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Organisation=-NONE-</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment>LIBERmenu=Person=-NONE-</rdfs:comment>
+    <rdfs:domain rdf:nodeID="A6"/>
+    <rdfs:comment>LIBERmenu=Project=-NONE-</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>LIBERmenu=Department=-NONE-</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Organisation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Organisation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#EmployeeOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:nodeID="A10"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasEmployee"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activities/Roles</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Person=General information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#EndYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#DatePeriod"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#FurtherResearchQuestions">
+    <rdfs:comment>LIBERmenu=Project=Results/comments</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Results/Comments</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Year">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#DatePoint"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Department"/>
+    <rdf:rest rdf:nodeID="A13"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#IdNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#StartOfProject">
+    <rdfs:comment>LIBERmenu=Project=General information</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Date"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#CoInvestigatorOf">
+    <rdfs:comment>LIBERmenu=Person=Activities/Roles</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasCoInvestigator"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activities/Roles</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.policygrid.org/utility.owl#MemberOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>LIBERphrase=Is co-investigator of</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#OurSpacesDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</rdf:first>
+    <rdf:rest rdf:nodeID="A17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#ResearcherOf">
+    <rdfs:comment>LIBERmenu=Person=Activities/Roles</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasResearcher"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activities/Roles</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.policygrid.org/utility.owl#MemberOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Project">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A18"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Country">
+    <rdfs:comment>LIBERmenu=Address=-NONE-</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#GrantNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Project=General information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#DataCollectionStage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.policygrid.org/utility.owl#ProjectStage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Month">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#DatePoint"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#PrincipalInvestigatorOf">
+    <rdfs:comment>LIBERmenu=Person=Activities/Roles</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasPrincipalInvestigator"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activities/Roles</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.policygrid.org/utility.owl#MemberOf"/>
+    <rdfs:comment>LIBERphrase=Is PI of</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#Email"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasCoInvestigator">
+    <rdfs:comment>LIBERmenu=Project=Members</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Person=General information</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#CoInvestigatorOf"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.policygrid.org/utility.owl#HasMember"/>
+    <rdfs:comment>LIBERphrase=Co-investigator</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#Place"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A12"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#OrganisationOrDepartment">
+    <rdfs:comment>LIBERmenu=Project=General information</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:nodeID="A19"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasProject"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Organisation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A26"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasAddress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="A24"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Address"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#AddressOf"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Person=General information</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Department=-NONE-</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Organisation=-NONE-</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#Postcode"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Department"/>
+    <rdf:rest rdf:nodeID="A29"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasEmployee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="A30"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#EmployeeOf"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Department=-NONE-</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Organisation=-NONE-</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#HasDescription"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasDepartment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Organisation"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Department"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#DepartmentOf"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Organisation=-NONE-</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Department">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:nodeID="A33"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#Name"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Organisation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasAdministrator">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.policygrid.org/utility.owl#HasMember"/>
+    <rdfs:comment>LIBERmenu=Person=General information</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment>LIBERphrase=Administrator</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Project=Members</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#AdministratorOf"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#Street"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdf:rest rdf:nodeID="A37"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#ResearchAimOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#ResearchAim"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasResearchAims"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+    <rdfs:comment>LIBERmenu=ResearchAim=-NONE-</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#ResearchQuestion"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#DatePoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.policygrid.org/utility.owl#Date"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Collection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:nodeID="A39"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Day">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#DatePoint"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#AdministratorOf">
+    <rdfs:comment>LIBERmenu=Person=Activities/Roles</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasAdministrator"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activities/Roles</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.policygrid.org/utility.owl#MemberOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>LIBERphrase=Is administrator of</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Place">
+    <rdfs:comment>LIBERmenu=Address=-NONE-</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Startdate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Email">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Person=General information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#EndOfProject">
+    <rdfs:comment>LIBERmenu=Project=General information</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Date"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Enddate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#HasDescription"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#ProjectStage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Department"/>
+    <rdf:rest rdf:nodeID="A41"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#BeginYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#DatePeriod"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Department"/>
+    <rdf:rest rdf:nodeID="A7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#IsRegistered">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#TelephoneNumber">
+    <rdfs:comment>LIBERmenu=Address=-NONE-</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#EndDay">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#DatePeriod"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#ResearchQuestion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:nodeID="A40"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Collection"/>
+    <rdfs:comment>LIBERmenu=Collection=-NONE-</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#ProjectDevelopmentStage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.policygrid.org/utility.owl#ProjectStage"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Department"/>
+    <rdf:rest rdf:nodeID="A34"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#DisseminationStage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.policygrid.org/utility.owl#ProjectStage"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Street">
+    <rdfs:comment>LIBERmenu=Address=-NONE-</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#ResearchAim"/>
+    <rdf:rest rdf:nodeID="A38"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#DatePeriod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.policygrid.org/utility.owl#Date"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Organisation"/>
+    <rdf:rest rdf:nodeID="A21"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#ContactOf">
+    <rdfs:comment>LIBERmenu=Person=Activities/Roles</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasContact"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activities/Roles</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#DepartmentOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Department"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Organisation"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasDepartment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Department=-NONE-</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#EndMonth">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#DatePeriod"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#BeginDay">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#DatePeriod"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Subtitle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Project=General information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#Name"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#AnalysisStage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.policygrid.org/utility.owl#ProjectStage"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Organisation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#PartOfProject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#ProjectStage"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasStage"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#ResearchInterest">
+    <rdfs:comment>LIBERmenu=Person=General information</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#HasItem"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#Gender"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Department"/>
+    <rdf:rest rdf:nodeID="A48"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Gender">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:nodeID="A49"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Person=-NONE-</rdfs:comment>
+    <rdfs:comment>LIBERpropername</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Organisation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HouseNumber">
+    <rdfs:comment>LIBERmenu=Address=-NONE-</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A51"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A52"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasProject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="A14"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#OrganisationOrDepartment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Department=-NONE-</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Organisation=-NONE-</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#BeginMonth">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#DatePeriod"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Department"/>
+    <rdf:rest rdf:nodeID="A9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Postcode">
+    <rdfs:comment>LIBERmenu=Address=-NONE-</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</rdf:first>
+    <rdf:rest rdf:nodeID="A5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#ResearchQuestionOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#ResearchQuestion"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasResearchQuestions"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+    <rdfs:comment>LIBERmenu=ResearchQuestion=-NONE-</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasPrincipalInvestigator">
+    <rdfs:comment>LIBERmenu=Project=Members</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#PrincipalInvestigatorOf"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.policygrid.org/utility.owl#HasMember"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasJobTitle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Person=General information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasStage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#ProjectStage"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#PartOfProject"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Website">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:nodeID="A50"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Person=General information</rdfs:comment>
+    <rdfs:comment>LIBERmenu=Project=-NONE-</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A47"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Organisation"/>
+    <rdf:rest rdf:nodeID="A53"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#DesignStage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.policygrid.org/utility.owl#ProjectStage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#DataPreparationStage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.policygrid.org/utility.owl#ProjectStage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#MemberOf">
+    <rdfs:comment>LIBERmenu=Person=Activities/Roles</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasMember"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activities/Roles</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdf:rest rdf:nodeID="A8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#Name"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasCollaborator">
+    <rdfs:comment>LIBERmenu=Project=Members</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#CollaboratorOf"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.policygrid.org/utility.owl#HasMember"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasContact">
+    <rdfs:comment>LIBERmenu=Person=General information</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#ContactOf"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Address">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A35"/>
+    <rdfs:subClassOf rdf:nodeID="A27"/>
+    <rdfs:subClassOf rdf:nodeID="A23"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:nodeID="A55"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#AddressOf">
+    <rdfs:comment>LIBERmenu=Address=-NONE-</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Address"/>
+    <rdfs:range rdf:nodeID="A43"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#HasAddress"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasSubcontractor">
+    <rdfs:comment>LIBERmenu=Project=Members</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#SubcontractorOf"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.policygrid.org/utility.owl#HasMember"/>
+    <rdfs:comment>LIBERmenu=Person=General information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#Name"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.policygrid.org/utility.owl#Country"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A56"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:nodeID="A44"/>
+    <rdfs:subClassOf rdf:nodeID="A22"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#ResearchAim">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:nodeID="A32"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasResearchAims">
+    <rdfs:comment>LIBERmenu=Project=-NONE-</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#ResearchAim"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#ResearchAimOf"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <rdf:first rdf:resource="http://www.policygrid.org/utility.owl#Organisation"/>
+    <rdf:rest rdf:nodeID="A36"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A42"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:nodeID="A0"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xxx</rdfs:comment>
+    <rdfs:comment>LIBERmenu=ResearchAim=-NONE-</rdfs:comment>
+    <rdfs:comment>LIBERmenu=ResearchQuestion=-NONE-</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataRange"/>
+    <owl:oneOf rdf:nodeID="A16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.policygrid.org/utility.owl#HasMember">
+    <rdfs:comment>LIBERmenu=Project=Members</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.policygrid.org/utility.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.policygrid.org/utility.owl#Person"/>
+    <owl:inverseOf rdf:resource="http://www.policygrid.org/utility.owl#MemberOf"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General information</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+</rdf:RDF>

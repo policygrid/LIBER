@@ -1,0 +1,16 @@
+<module>
+
+	<!-- Inherit the core Web Toolkit stuff.                  -->
+	<inherits name='com.google.gwt.user.User'/>
+	<inherits name='liber.edit.WYSIWYMinterface'/>
+	
+	<!-- Specify the app entry point class.                   -->
+	<entry-point class='liber.browse.client.WYSIWYMinterface'/>
+	
+	<!-- Gwm dependency --> 
+	<!--inherits name='org.gwm.GwtWindowManager'/-->
+
+	<stylesheet src='WYSIWYMinterface.css'/>
+  	<servlet path='/wysiwym3' class='liber.browse.server.LiberServletImpl'/>
+  	<servlet path='/postings3' class='liber.browse.server.Postings'/>
+</module>

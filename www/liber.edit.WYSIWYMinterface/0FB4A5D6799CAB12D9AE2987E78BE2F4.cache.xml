@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cache-entry>
+	<generated-type-hash class="com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException_FieldSerializer" hash="FF198044879E67E1ACF2E0C29CC58CB5"/>
+	<generated-type-hash class="liber.edit.client.ExistingInstances_FieldSerializer" hash="CAFC2065BBC8755A68667FAA94424AC9"/>
+	<generated-type-hash class="liber.edit.client.TagCloud_FieldSerializer" hash="709FFFC88B33BBD436CD4024E21ECA97"/>
+	<generated-type-hash class="com.google.gwt.user.client.ui.TreeImages_generatedBundle" hash="C4DB9D53C840859028C6F483DB58A75C"/>
+	<generated-type-hash class="liber.edit.client.FormInfo_FieldSerializer" hash="61360780905C7A244312DF27D44674DD"/>
+	<generated-type-hash class="liber.edit.client.LiberServlet_TypeSerializer" hash="70241034F3AB61CD69388D77C3AAD8EF"/>
+	<generated-type-hash class="liber.edit.client.AnchorInfo_FieldSerializer" hash="2E90236DF65246670749AD08117654BF"/>
+	<generated-type-hash class="liber.edit.client.InstanceData_FieldSerializer" hash="5EA336FF9193332F6FECC04A3624E61E"/>
+	<generated-type-hash class="liber.edit.client.LiberServlet_Proxy" hash="AF77F134884769E42296A2DFA73A40AF"/>
+	<generated-type-hash class="liber.edit.client.QueryDateValue_FieldSerializer" hash="532A89836AC8EA6BE07488BC837F380F"/>
+	<generated-type-hash class="liber.edit.client.Hierarchy_FieldSerializer" hash="1B7C364E6A687DBE063546BAAB3DDB62"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.TreeImages" out="com.google.gwt.user.client.ui.TreeImages_generatedBundle"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.TextBoxImpl" out="com.google.gwt.user.client.ui.impl.TextBoxImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.impl.HTTPRequestImpl" out="com.google.gwt.user.client.impl.HTTPRequestImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.impl.DOMImpl" out="com.google.gwt.user.client.impl.DOMImplMozilla"/>
+	<rebind-decision in="com.google.gwt.user.client.impl.HistoryImpl" out="com.google.gwt.user.client.impl.HistoryImplMozilla"/>
+	<rebind-decision in="liber.edit.client.WYSIWYMinterface" out="liber.edit.client.WYSIWYMinterface"/>
+	<rebind-decision in="liber.edit.client.LiberServlet" out="liber.edit.client.LiberServlet_Proxy"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.ListBox.Impl" out="com.google.gwt.user.client.ui.ListBox.Impl"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.FormPanelImpl" out="com.google.gwt.user.client.ui.impl.FormPanelImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.ClippedImageImpl" out="com.google.gwt.user.client.ui.impl.ClippedImageImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.FocusImpl" out="com.google.gwt.user.client.ui.impl.FocusImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.PopupImpl" out="com.google.gwt.user.client.ui.impl.PopupImplMozilla"/>
+</cache-entry>
